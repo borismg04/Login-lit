@@ -22,7 +22,14 @@ export class AppLogin extends LitElement {
 
   render() {
     return html`
-      ${ this.success ? html`<h1>Bienvenido</h1>` : html`<login-lit></login-lit>` }
+      ${ this.success ?
+        html`<h1>Bienvenido</h1>`
+          :
+        html`<login-lit @sigin=${this._hiddenLogin}>Error</login-lit>`}
     `;
+  }
+
+  _hiddenLogin(e) {
+    this.success = e.detail;
   }
 }

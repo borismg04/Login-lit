@@ -61,7 +61,14 @@ export class LogginLit extends LitElement {
     const email = this.shadowRoot.querySelector('#email').value;
     const pass = this.shadowRoot.querySelector('#pass').value;
     console.log(email, pass);
-    alert(`Bienvenido ${email} || ${pass}`);
+    // alert(`Bienvenido ${email} || ${pass}`);
+
+    if (!!email && !!pass) {
+      this.dispatchEvent(new CustomEvent('sigin', {
+        detail: { login : true },
+        bubbles: true,
+      }));
+    }
   }
 }
 
