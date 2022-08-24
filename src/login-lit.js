@@ -5,40 +5,40 @@ export class LogginLit extends LitElement {
   static get styles() {
     return css`
       .container {
-        background-color: #cee3fd;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
+        background-color: #ecf5ff;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        height: 350px;
+        width: 450px;
         text-align: center;
-        color: #2a1bff;
+        color: #483ed3;
+        padding-top: 15px;
       }
       input {
-        width: 30%;
-        height: 20px;
-        margin: 10px;
+        width: 60%;
+        height: 15px;
+        margin-top: 15px;
         padding: 10px;
         border-radius: 5px;
         border: 1px solid #ccc;
         box-shadow: inset 0px 0px 5px #ccc;
       }
       button {
-        width: 15%;
+        width: 150px;
         height: 40px;
-        margin: 10px;
+        margin: 20px;
         padding: 10px;
         border-radius: 5px;
         border: 1px solid #ccc;
         background-color: #295bff;
         color: #fff;
         font-weight: bold;
-        box-shadow: inset 0px 0px 5px #ccc;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
       }
 
       button:hover {
         background-color: #fff;
         color: #2a1bff;
+        cursor: pointer;
       }
     `;
   }
