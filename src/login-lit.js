@@ -48,12 +48,20 @@ export class LogginLit extends LitElement {
     return html`
       <div class="container">
         <h1>Login whith LitElement</h1>
-        <input type="email" placeholder="Write your email" />
-        <input type="password" placeholder="Password" />
 
-        <button>Sign in</button>
+        <input type="email" id="email" placeholder="Write your Email">
+        <input type="password" id="pass" placeholder="Write your Password">
+
+        <button @click="${this._login}">Login</button>
       </div>
     `;
+  }
+
+  _login () {
+    const email = this.shadowRoot.querySelector('#email').value;
+    const pass = this.shadowRoot.querySelector('#pass').value;
+    console.log(email, pass);
+    alert(`Bienvenido ${email} || ${pass}`);
   }
 }
 
